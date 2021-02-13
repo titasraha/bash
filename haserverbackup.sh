@@ -53,7 +53,7 @@ mount -t cifs -o username=$DST_USER $DST_SERVER $LOCAL_MOUNT
 if [ $? != 0 ]; then { echo "Local mount failure. Quitting..."; exit; } fi
 
 
-# ------------ Add Device mapper ---------------------
+# ------------ Add Device mapper ----------------------
 kpartx -a -v $LOCAL_MOUNT/$DST_IMAGE
 if [ $? != 0 ]; then
   echo "Unable to add device mapper.";
